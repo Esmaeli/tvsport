@@ -28,10 +28,9 @@ jobs:
         python index.py  # نام فایل پایتون شما 'index.py' است
 
     - name: Set up Git
-      uses: actions/setup-git@v2
-      with:
-        git_user_name: 'github-actions[bot]'
-        git_user_email: 'github-actions[bot]@users.noreply.github.com'
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
     - name: Commit and push changes
       run: |
