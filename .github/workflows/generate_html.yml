@@ -25,8 +25,8 @@ jobs:
 
     - name: Run Python script
       run: |
-        python index.py  # نام فایل پایتون خود را جایگزین کنید
-        
+        python your_script_name.py  # نام فایل پایتون خود را جایگزین کنید
+
     - name: Commit and push changes
       run: |
         git config --global user.name "github-actions[bot]"
