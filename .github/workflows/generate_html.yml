@@ -25,7 +25,7 @@ jobs:
 
     - name: Run Python script
       run: |
-        python your_script_name.py  # نام فایل پایتون خود را جایگزین کنید
+        python index.py  # نام فایل پایتون خود را جایگزین کنید
 
     - name: Commit and push changes
       run: |
