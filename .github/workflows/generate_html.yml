@@ -27,7 +27,7 @@ jobs:
       run: |
         python index.py  # نام فایل پایتون شما 'index.py' است
 
-    - name: Set up Git
+    - name: Set up Git config
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
