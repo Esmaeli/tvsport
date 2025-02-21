@@ -25,14 +25,18 @@ jobs:
 
     - name: Run Python script
       run: |
-        python index.py  # نام فایل پایتون خود را جایگزین کنید
+        python index.py  # نام فایل پایتون شما 'index.py' است
+
+    - name: Set up Git
+      uses: actions/setup-git@v2
+      with:
+        git_user_name: 'github-actions[bot]'
+        git_user_email: 'github-actions[bot]@users.noreply.github.com'
 
     - name: Commit and push changes
       run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add index.html
+        git add index.html  # فایل HTML که تولید شده است
         git commit -m "Auto-generated HTML file"
-        git push https://github.com/${{ github.repository }}.git HEAD:main
+        git push https://${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
